@@ -1,0 +1,5 @@
+infrastructure/*.hcl
+infrastructure/.terraform/*
+infrastructure/*.tfplan
+infrastructure/*.backup
+infrastructure/terraform.tfstate
