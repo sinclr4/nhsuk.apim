@@ -24,11 +24,8 @@ resource "azurerm_api_management_api_operation" "get_backend" {
   resource_group_name = azurerm_resource_group.resource_group.name
   display_name        = "Get Backend"
   method              = "GET"
-<<<<<<< HEAD
   url_template        = "/get-backend2"
-=======
-  url_template        = "/get-backend"
->>>>>>> 4703766 (first commit)
+
   response {
     status_code = 200
     description = "OK"

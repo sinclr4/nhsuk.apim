@@ -24,6 +24,22 @@ resource "azurerm_api_management_api" "profile-viewer-api" {
 
 }
 
+resource "azurerm_api_management_api_operation" "get_profiles" {
+  operation_id        = "get-profiles"
+  api_name            = azurerm_api_management_api.profile-viewer-api.name
+  api_management_name = azurerm_api_management.apim.name
+  resource_group_name = azurerm_resource_group.resource_group.name
+  display_name        = "Get Profiles"
+  method              = "GET"
+  url_template        = "/get-profiles"
+  response {
+    status_code = 200
+    description = "OK"
+  }
+}
+
+
+
 resource "azurerm_api_management_api" "profile-viewer-api-2" {
   name                = "profile-viewer-api-2"
   resource_group_name = azurerm_resource_group.resource_group.name
@@ -42,9 +58,9 @@ resource "azurerm_api_management_api" "profile-viewer-api-2" {
 
 }
 
-resource "azurerm_api_management_api_operation" "get_profiles" {
-  operation_id        = "get-profiles"
-  api_name            = azurerm_api_management_api.profile-viewer-api.name
+resource "azurerm_api_management_api_operation" "get_profiles-2" {
+  operation_id        = "get-profiles-2"
+  api_name            = azurerm_api_management_api.profile-viewer-api-2.name
   api_management_name = azurerm_api_management.apim.name
   resource_group_name = azurerm_resource_group.resource_group.name
   display_name        = "Get Profiles"
