@@ -5,6 +5,14 @@ variable "app_name" {
 
 # Regions / IDs sourced from https://api.carbonintensity.org.uk/
 
+locals {
+  index_json = jsondecode(file("indexes/profiles.json"))
+  indexer_json = jsondecode(file("indexers/profiles.json"))
+  datasource_json = jsondecode(file("datasources/profiles.json"))
+
+}
+
+
 variable "backend_regions" {
   type = list(object({
     code   = string

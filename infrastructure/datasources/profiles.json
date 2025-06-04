@@ -1,0 +1,23 @@
+{
+  "name": "service-search-syndication-3-0",
+  "description": "The searchpopulation.ServiceSearch_Syndication_V3 view in NHSUKOrganisationProfile",
+  "type": "azuresql",
+  "subtype": null,
+  "credentials": {
+    "connectionString": "Server=tcp:nhsuk-org-profile-sql-int-uks.database.windows.net,1433;Initial Catalog=NHSUKOrganisationProfile;Persist Security Info=False;User ID=AzureSearchServiceAdminUser;Password=ox8r3oefGxbFtpGG;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"
+  },
+  "container": {
+    "name": "searchpopulation.ServiceSearch_Syndication_V3",
+    "query": null
+  },
+  "dataChangeDetectionPolicy": {
+    "@odata.type": "#Microsoft.Azure.Search.HighWaterMarkChangeDetectionPolicy",
+    "highWaterMarkColumnName": "Rowversion"
+  },
+  "dataDeletionDetectionPolicy": {
+    "@odata.type": "#Microsoft.Azure.Search.SoftDeleteColumnDeletionDetectionPolicy",
+    "softDeleteColumnName": "IsVisible",
+    "softDeleteMarkerValue": "false"
+  },
+  "encryptionKey": null
+}

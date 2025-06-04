@@ -1,0 +1,1575 @@
+{
+
+  "name": "service-search-syndication-3-0",
+  "defaultScoringProfile": "",
+  "fields": [
+    {
+      "name": "SearchKey",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": false,
+      "key": true,
+      "synonymMaps": []
+    },
+    {
+      "name": "ODSCode",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": false,
+      "key": false,
+      "synonymMaps": []
+    },
+    {
+      "name": "OrganisationName",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": false,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "OrganisationAliases",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "OrganisationAlias",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "OrganisationAliasId",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": false,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        }
+      ]
+    },
+    {
+      "name": "OrganisationTypeId",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "OrganisationType",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "OrganisationStatus",
+      "type": "Edm.String",
+      "searchable": false,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": false,
+      "key": false,
+      "synonymMaps": []
+    },
+    {
+      "name": "Address1",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": false,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "Address2",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": false,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "Address3",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "City",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "synonymMaps": []
+    },
+    {
+      "name": "County",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "synonymMaps": []
+    },
+    {
+      "name": "Latitude",
+      "type": "Edm.Double",
+      "searchable": false,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": false,
+      "synonymMaps": []
+    },
+    {
+      "name": "Longitude",
+      "type": "Edm.Double",
+      "searchable": false,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": false,
+      "synonymMaps": []
+    },
+    {
+      "name": "Postcode",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": false,
+      "retrievable": true,
+      "stored": true,
+      "sortable": false,
+      "facetable": false,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "Geocode",
+      "type": "Edm.GeographyPoint",
+      "searchable": false,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": false,
+      "key": false,
+      "synonymMaps": []
+    },
+    {
+      "name": "ParentOrganisation",
+      "type": "Edm.ComplexType",
+      "fields": [
+        {
+          "name": "ODSCode",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "OrganisationName",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        }
+      ]
+    },
+    {
+      "name": "Services",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "ServiceName",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "ServiceCode",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "Contacts",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "ContactMethodType",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "ContactValue",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        },
+        {
+          "name": "ServiceProvider",
+          "type": "Edm.ComplexType",
+          "fields": [
+            {
+              "name": "ODSCode",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "OrganisationName",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        },
+        {
+          "name": "Treatments",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "Name",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        },
+        {
+          "name": "OpeningTimes",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "Weekday",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "OpeningTime",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "ClosingTime",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "OffsetOpeningTime",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "OffsetClosingTime",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "OpeningTimeType",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "AdditionalOpeningDate",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "IsOpen",
+              "type": "Edm.Boolean",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "FromAgeDays",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "ToAgeDays",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        },
+        {
+          "name": "AgeRange",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "FromAgeDays",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "ToAgeDays",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        },
+        {
+          "name": "Metrics",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "MetricID",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "MetricName",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "Description",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "Text",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        },
+        {
+          "name": "KeyValueData",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "Key",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "Value",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "OpeningTimes",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "Weekday",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "OpeningTime",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "ClosingTime",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "OffsetOpeningTime",
+          "type": "Edm.Int32",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "OffsetClosingTime",
+          "type": "Edm.Int32",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "OpeningTimeType",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "AdditionalOpeningDate",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "IsOpen",
+          "type": "Edm.Boolean",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        }
+      ]
+    },
+    {
+      "name": "Contacts",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "ContactType",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "ContactAvailabilityType",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "ContactMethodType",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "ContactValue",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": false,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        }
+      ]
+    },
+    {
+      "name": "Facilities",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "Id",
+          "type": "Edm.Int64",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "Name",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": true,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "Value",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "FacilityGroupName",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": true,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        }
+      ]
+    },
+    {
+      "name": "GSD",
+      "type": "Edm.ComplexType",
+      "fields": [
+        {
+          "name": "Metrics",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "ElementTitle",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "analyzer": "standard.lucene",
+              "synonymMaps": []
+            },
+            {
+              "name": "ElementText",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "analyzer": "standard.lucene",
+              "synonymMaps": []
+            },
+            {
+              "name": "ElementOrder",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": false,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "MetricId",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        },
+        {
+          "name": "DataSupplier",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "ProvidedBy",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "analyzer": "standard.lucene",
+              "synonymMaps": []
+            },
+            {
+              "name": "ProvidedByImage",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "analyzer": "standard.lucene",
+              "synonymMaps": []
+            },
+            {
+              "name": "ProvidedByUrl",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "ProvidedOn",
+              "type": "Edm.DateTimeOffset",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        },
+        {
+          "name": "GsdServices",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "ServiceId",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "analyzer": "standard.lucene",
+              "synonymMaps": []
+            },
+            {
+              "name": "ServiceName",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "analyzer": "standard.lucene",
+              "synonymMaps": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "LastUpdatedDates",
+      "type": "Edm.ComplexType",
+      "fields": [
+        {
+          "name": "OpeningTimes",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "BankHolidayOpeningTimes",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "TemporaryChangesOpeningTimes",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "DentistsAcceptingPatients",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "Facilities",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "HospitalDepartment",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "Services",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "ContactDetails",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "AcceptingPatients",
+          "type": "Edm.DateTimeOffset",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": true,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "KeyValueData",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "ServiceCode",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": false,
+              "key": false,
+              "analyzer": "standard.lucene",
+              "synonymMaps": []
+            },
+            {
+              "name": "Key",
+              "type": "Edm.String",
+              "searchable": true,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "LastUpdatedDate",
+              "type": "Edm.DateTimeOffset",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "AcceptingPatients",
+      "type": "Edm.ComplexType",
+      "fields": [
+        {
+          "name": "Dentist",
+          "type": "Collection(Edm.ComplexType)",
+          "fields": [
+            {
+              "name": "Id",
+              "type": "Edm.Int32",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "Name",
+              "type": "Edm.String",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            },
+            {
+              "name": "AcceptingPatients",
+              "type": "Edm.Boolean",
+              "searchable": false,
+              "filterable": true,
+              "retrievable": true,
+              "stored": true,
+              "sortable": false,
+              "facetable": true,
+              "key": false,
+              "synonymMaps": []
+            }
+          ]
+        },
+        {
+          "name": "GP",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        }
+      ]
+    },
+    {
+      "name": "GPRegistration",
+      "type": "Edm.ComplexType",
+      "fields": [
+        {
+          "name": "RegistrationLink",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "AcceptingOutOfArea",
+          "type": "Edm.Boolean",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": true,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        }
+      ]
+    },
+    {
+      "name": "RelatedIAPTCCGs",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "ODSCode",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "OrganisationName",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        }
+      ]
+    },
+    {
+      "name": "OrganisationSubType",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": true,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    },
+    {
+      "name": "Trusts",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "ODSCode",
+          "type": "Edm.String",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "OrganisationName",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        }
+      ]
+    },
+    {
+      "name": "Metrics",
+      "type": "Collection(Edm.ComplexType)",
+      "fields": [
+        {
+          "name": "MetricID",
+          "type": "Edm.Int32",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "MetricName",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "DisplayName",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "Description",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "Value",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "Value2",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "Value3",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "Text",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "LinkUrl",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "LinkText",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "MetricDisplayTypeID",
+          "type": "Edm.Int32",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "MetricDisplayTypeName",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "HospitalSectorType",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "MetricText",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "DefaultText",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "IsMetaMetric",
+          "type": "Edm.Boolean",
+          "searchable": false,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "synonymMaps": []
+        },
+        {
+          "name": "BandingClassification",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        },
+        {
+          "name": "BandingName",
+          "type": "Edm.String",
+          "searchable": true,
+          "filterable": true,
+          "retrievable": true,
+          "stored": true,
+          "sortable": false,
+          "facetable": false,
+          "key": false,
+          "analyzer": "standard.lucene",
+          "synonymMaps": []
+        }
+      ]
+    },
+    {
+      "name": "Country",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "stored": true,
+      "sortable": true,
+      "facetable": false,
+      "key": false,
+      "analyzer": "standard.lucene",
+      "synonymMaps": []
+    }
+  ],
+  "scoringProfiles": [],
+  "corsOptions": {
+    "allowedOrigins": [
+      "*"
+    ],
+    "maxAgeInSeconds": 300
+  },
+  "suggesters": [
+    {
+      "name": "orgname-suggester",
+      "searchMode": "analyzingInfixMatching",
+      "sourceFields": [
+        "ODSCode",
+        "OrganisationName",
+        "OrganisationType",
+        "Address1",
+        "Address2",
+        "Address3",
+        "City",
+        "Postcode"
+      ]
+    }
+  ],
+  "analyzers": [],
+  "tokenizers": [],
+  "tokenFilters": [],
+  "charFilters": [],
+  "similarity": {
+    "@odata.type": "#Microsoft.Azure.Search.BM25Similarity"
+  }
+}

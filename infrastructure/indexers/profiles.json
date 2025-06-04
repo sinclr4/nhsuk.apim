@@ -1,0 +1,124 @@
+{
+  
+  "name": "service-search-syndication-3-0",
+  "description": "Indexer for ingesting NHS Organisation Profile Lookup data",
+  "dataSourceName": "service-search-syndication-3-0",
+  "skillsetName": null,
+  "targetIndexName": "service-search-syndication-3-0",
+  "disabled": false,
+  "schedule": null,
+  "parameters": {
+    "batchSize": null,
+    "maxFailedItems": 0,
+    "maxFailedItemsPerBatch": 0,
+    "configuration": {}
+  },
+  "fieldMappings": [
+    {
+      "sourceFieldName": "OrganisationAliases",
+      "targetFieldName": "OrganisationAliases",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "ParentOrganisation",
+      "targetFieldName": "ParentOrganisation",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "Services",
+      "targetFieldName": "Services",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "OpeningTimes",
+      "targetFieldName": "OpeningTimes",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "Contacts",
+      "targetFieldName": "Contacts",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "Facilities",
+      "targetFieldName": "Facilities",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "GSD",
+      "targetFieldName": "GSD",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "LastUpdatedDates",
+      "targetFieldName": "LastUpdatedDates",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "AcceptingPatients",
+      "targetFieldName": "AcceptingPatients",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "GPRegistration",
+      "targetFieldName": "GPRegistration",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "RelatedIAPTCCGs",
+      "targetFieldName": "RelatedIAPTCCGs",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "Trusts",
+      "targetFieldName": "Trusts",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    },
+    {
+      "sourceFieldName": "Metrics",
+      "targetFieldName": "Metrics",
+      "mappingFunction": {
+        "name": "toJson",
+        "parameters": null
+      }
+    }
+  ],
+  "outputFieldMappings": [],
+  "encryptionKey": null
+}
